@@ -8,7 +8,7 @@ class Geometry::Rectangle
 	end
 
 	def perimeter
-		if @length == 0 || @breadth == 0
+		if @length <= 0 || @breadth <= 0
 			return 0	
 		else
 			2 * (@length + @breadth)
