@@ -7,19 +7,9 @@ describe Geometry::Rectangle do
     expect(@rectangle.perimeter).to eq(6)
   end
 
-  it "parameter of rectangle with sides 0 and 2 must have perimeter 0" do
-    @rectangle = Geometry::Rectangle.new(0,2)
-    expect(@rectangle.perimeter).to eq(0)
+  it "parameter of rectangle with sides 6 and 2 must have perimeter 16" do
+    @rectangle = Geometry::Rectangle.new(6,2)
+    expect(@rectangle.perimeter).to eq(16)
   end
   
-  it "parameter of rectangle with sides 8 and 0 must have perimeter 0" do
-    @rectangle = Geometry::Rectangle.new(8,0)
-    expect(@rectangle.perimeter).to eq(0)
-  end
-
-  it "parameter of rectangle with negative side must have perimeter 0" do
-    @rectangle = Geometry::Rectangle.new(-8,9)
-    expect(@rectangle.perimeter).to eq(0)
-  end
-
 end
