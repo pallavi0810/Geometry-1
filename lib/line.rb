@@ -1,32 +1,18 @@
+# Represents properties and operations related to a geometric line
 class Line
-	#class to define coordinates of a line
-	attr_reader :x1, :x2, :y1, :y2
-
-	def initialize(x1,y1,x2,y2)
-		
-		@x1 = x1
-		@y1 = y1
-		@x2 = x2
-		@y2 = y2
+	attr_reader :end_point1, :end_point2
+	def initialize (end_point1,end_point2)
+		@end_point1 = end_point1
+		@end_point2 = end_point2
 	end
-	
-	def equals(line2)
-		
-		if self == nil && line2 == nil
-			return true
-		
-		elsif self == nil || line2 == nil
-			return false
 
-		elsif (self.x1 == line2.x1 && self.x2 == line2.x2 && 
-			self.y1 == line2.y1 && self.y2 == line2.y2) || 
-		(self.x1 == line2.x2 && self.x2 == line2.x1 
-			&& self.y1 == line2.y2 && self.y2 == line2.y1) 
-			true
+	def length
+		@end_point1.distance(@end_point2)
 		
-		else 
-			false
-		end
+	end
 
+	def ==(compare)
+		(@end_point1 == compare.end_point1 && @end_point2 == compare.end_point2) || 
+		(@end_point1 == compare.end_point2 && @end_point2 == compare.end_point1) if compare && compare.class == self.class
 	end
 end
