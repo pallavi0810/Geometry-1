@@ -5,6 +5,7 @@ class Line
 		@y1 = y1
 		@x2 = x2
 		@y2 = y2
+		#sfvdgjv
 	end
 
 	def length
