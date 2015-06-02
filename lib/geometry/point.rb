@@ -18,6 +18,16 @@ class Geometry::Point
 		return Math.sqrt(s)
 	end
 
+	def getRectangleLength(point)
+		length = (point.x - x).abs
+		return length
+	end
+
+	def getRectangleBreadth(point)
+		breadth = (point.y - y).abs
+		return breadth
+	end
+
 	def hash
 		arr=[]
 		arr << @x
