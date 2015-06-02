@@ -17,4 +17,9 @@ describe Geometry::Rectangle do
     expect(@rectangle.area).to eq(2)
   end
 
+  it "rectangle with sides 6 and 2 must have area 12" do
+    @rectangle = Geometry::Rectangle.new(6,2)
+    expect(@rectangle.area).to eq(12)
+  end
+
 end
