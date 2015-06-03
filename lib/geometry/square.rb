@@ -1,9 +1,10 @@
 # Represents properties and operations related to a square
 
 class Geometry::Square
-	attr_accessor :side, :area, :perimeter
-	def initialize(side)
+	attr_accessor :side, :area, :perimeter, :point
+	def initialize(side, point)
 		@side = side
+		@point = point
 	end
 
 	def area
@@ -13,5 +14,5 @@ class Geometry::Square
 	def perimeter
 		perimeter = 4*side
 	end
-	
+
 end
